@@ -18,4 +18,5 @@ A simple python tool for scanning your network
 # Usage:
 - python3 networkscanner.py -h (for displaying help menu)
 - python3 networkscanner.py -t (t for target)
-- python3 networkscanner.py -t 192.168.0.1 ()
+- python3 networkscanner.py -t 192.168.0.1 (for scanning one ip on your network)
+- python3 networkscanner.py -t 192.168.0/24 (for scannning your whole network)
