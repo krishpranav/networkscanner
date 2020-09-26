@@ -14,3 +14,6 @@ A simple python tool for scanning your network
 - sudo chmod +x *
 - you need python3 install python3 by clicking <a href="https://www.python.org/ftp/python/3.8.6/python-3.8.6-macosx10.9.pkg">here</a>
 - python3 networkscanner.py -h 
+
+# Usage:
+- python3 networkscanner.py -h (for displaying help menu)
