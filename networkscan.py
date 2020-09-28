@@ -5,7 +5,7 @@ import scapy.all as scapy
 import argparse              #imports
 import time
 
-scan function
+# scan function
 def scan(ip):
     arp_request = scapy.ARP(pdst=ip)
     broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
