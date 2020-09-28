@@ -5,17 +5,18 @@ import scapy.all as scapy
 import argparse              #imports
 import time
 
-#scan function
+scan function
 def scan(ip):
-    arp_requests = scapy.ARP(pdst=ip)
+    arp_request = scapy.ARP(pdst=ip)
     broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
-    arp_requests_broadcast = broadcast / arp_request
-    answerd_list = scapy.srp(arp_requests_broadcast, timeout=1, verbose=False)[0]
+    arp_request_broadcast = broadcast / arp_request
+    answered_list = scapy.srp(arp_request_broadcast, timeout=1, verbose=False)[0]
     client_list = []
     for element in answered_list:
-        cliend_dict = {"ip": element[1].psrc, "mac": element[1].hwsrc}
+        client_dict = {"ip": element[1].psrc, "mac": element[1].hwsrc}
         client_list.append(client_dict)
     return client_list
+
 
 #result printing
 def print_result(result_list):
