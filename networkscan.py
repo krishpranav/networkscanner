@@ -13,7 +13,7 @@ def scan(ip):
     answered_list = scapy.srp(arp_request_broadcast, timeout=1, verbose=False)[0]
     client_list = []
     for element in answered_list:
-        client_dict = {"ip": element[1].psrc, "mac": element[1].hwsrc}
+        client_dict = {"ip" : element[1].psrc, "mac": element[1].hwsrc}
         client_list.append(client_dict)
     return client_list
 
