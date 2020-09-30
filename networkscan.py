@@ -30,7 +30,7 @@ def print_result(result_list):
         print(client["ip"] + "\t\t" + client["mac"])
 
 
-#add user parser
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-t", "--target", dest="target_ip", help="Target IP / Range IP")
 options = parser.parse_args()
