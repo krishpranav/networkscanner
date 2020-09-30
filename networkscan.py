@@ -18,22 +18,21 @@ def scan(ip):
     return client_list
 
 
+
 #result printing
 def print_result(result_list):
     print("Scanning Your Network...")
     time.sleep(3)
-    print("_" * 45)
-    print("IP\t\t\tMAC Address")
+    print("-" * 45)
+    print("IP\t\t\tMac Address")
     print("-" * 45)
 
     for client in result_list:
         print(client["ip"] + "\t\t" + client["mac"])
 
-
-
-parser = argparse.ArgumentParser()
-parser.add_argument("-t", "--target", dest="target_ip", help="Target IP / Range IP")
-options = parser.parse_args()
+praser = argparse.ArgumentParser()
+praser.add_argument("-t", "--target", dest="target_ip", help="Target IP / Range IP")
+options = praser.parse_args()
 target = options.target_ip
 
 print_result(scan(target))
